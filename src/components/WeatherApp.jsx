@@ -59,7 +59,6 @@ export default function WeatherApp() {
     console.log(temp);
     console.log(icon); 
     console.log(date);
-    let Ranya = "./icons/"+`${icon}`+".png"
   return (
     <div>
        <form onSubmit={handleSubmit}>
@@ -67,7 +66,7 @@ export default function WeatherApp() {
             <button type="submit">Valid</button>
        </form>
        <div className="Days">
-            <WeatherDay /* dayName={getDay(date)}*/ date={date} icon={Ranya} temperature={temp}></WeatherDay>
+            <WeatherDay /* dayName={getDay(date)}*/ date={date} src={`icons/${icon}.png`} temperature={temp}></WeatherDay>
             {/* <WeatherDay dayName="" date={} icon={} temperature={}></WeatherDay>
             <WeatherDay dayName="WED" date={} icon={} temperature={}></WeatherDay>
             <WeatherDay dayName="THU" date={} icon={} temperature={}></WeatherDay>
